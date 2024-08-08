@@ -1,0 +1,44 @@
+name       : quickemu
+version    : 4.9.6
+release    : 1
+source     :
+    - https://github.com/quickemu-project/quickemu/archive/refs/tags/4.9.6.tar.gz : 796a047b0bfabb91eb143e5422ff74f5d2812f47120ed6b34eaf82bbdfe3e2a3
+homepage   : https://github.com/quickemu-project/quickemu/
+license    : MIT
+component  : virt
+summary    : Quickly create and run optimised Windows, macOS and Linux virtual machines.
+description: |
+    Quickemu is a wrapper for the excellent QEMU that automatically "does the right thing" when creating virtual machines.
+    No requirement for exhaustive configuration options. You decide what operating system you want to run and Quickemu takes care of the rest 🤖
+rundeps    :
+    - qemu
+    - bash
+    - coreutils
+    - curl
+    - edk2-ovmf
+    - gawk
+    - grep
+    - mesa-demos
+    - jq
+    - pciutils
+    - procps-ng
+    - python3
+    - cdrtools
+    - usbutils
+    - util-linux
+    - sed
+    - socat
+    - spice-gtk
+    - swtpm
+    - xdg-user-dirs
+    - xrandr
+    - zsync
+    - unzip
+install    : |
+    install -Dm00664 $workdir/docs/quickemu.1 $installdir/usr/share/man/man1/quickemu.1
+    install -Dm00664 $workdir/docs/quickemu_conf.1 $installdir/usr/share/man/man1/quickemu_conf.1
+    install -Dm00664 $workdir/docs/quickget.1 $installdir/usr/share/man/man1/quickget.1
+    install -Dm00755 $workdir/quickemu $installdir/usr/bin/quickemu
+    install -Dm00755 $workdir/quickget $installdir/usr/bin/quickget
+    install -Dm00755 $workdir/quickreport $installdir/usr/bin/quickreport
+    install -Dm00755 $workdir/chunkcheck $installdir/usr/bin/chunkcheck
