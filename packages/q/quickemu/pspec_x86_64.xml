@@ -1,0 +1,43 @@
+<PISI>
+    <Source>
+        <Name>quickemu</Name>
+        <Homepage>https://github.com/quickemu-project/quickemu/</Homepage>
+        <Packager>
+            <Name>Ian M. Jones</Name>
+            <Email>ian@ianmjones.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <PartOf>virt</PartOf>
+        <Summary xml:lang="en">Quickly create and run optimised Windows, macOS and Linux virtual machines.</Summary>
+        <Description xml:lang="en">Quickemu is a wrapper for the excellent QEMU that automatically &quot;does the right thing&quot; when creating virtual machines.
+No requirement for exhaustive configuration options. You decide what operating system you want to run and Quickemu takes care of the rest &#x1f916;
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>quickemu</Name>
+        <Summary xml:lang="en">Quickly create and run optimised Windows, macOS and Linux virtual machines.</Summary>
+        <Description xml:lang="en">Quickemu is a wrapper for the excellent QEMU that automatically &quot;does the right thing&quot; when creating virtual machines.
+No requirement for exhaustive configuration options. You decide what operating system you want to run and Quickemu takes care of the rest &#x1f916;
+</Description>
+        <PartOf>virt</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/chunkcheck</Path>
+            <Path fileType="executable">/usr/bin/quickemu</Path>
+            <Path fileType="executable">/usr/bin/quickget</Path>
+            <Path fileType="executable">/usr/bin/quickreport</Path>
+            <Path fileType="man">/usr/share/man/man1/quickemu.1</Path>
+            <Path fileType="man">/usr/share/man/man1/quickemu_conf.1</Path>
+            <Path fileType="man">/usr/share/man/man1/quickget.1</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2024-08-11</Date>
+            <Version>4.9.6</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Ian M. Jones</Name>
+            <Email>ian@ianmjones.com</Email>
+        </Update>
+    </History>
+</PISI>
