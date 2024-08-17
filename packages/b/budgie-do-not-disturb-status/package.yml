@@ -1,0 +1,21 @@
+name       : budgie-do-not-disturb-status
+version    : 1.0.1
+release    : 1
+source     :
+    - https://git.sr.ht/~ianmjones/budgie-do-not-disturb-status/archive/v1.0.1.tar.gz : b63e70a0fcc6abf13c22e0e42e377e8e353c291dbaba6eb48fff5a84ebcdda02
+homepage   : https://git.sr.ht/~ianmjones/budgie-do-not-disturb-status
+license    : MIT
+component  : system.utils
+summary    : Get and set Budgie Desktop's Do Not Disturb status via the CLI.
+description: |
+    Get and set Budgie Desktop's Do Not Disturb status via the CLI.
+networking : yes
+builddeps  :
+    - golang
+    - scdoc
+rundeps    :
+    - dbus
+build      : |
+    %make
+install    : |
+    %make_install PREFIX=/usr
