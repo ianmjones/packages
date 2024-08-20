@@ -1,0 +1,38 @@
+name       : snippetexpander
+version    : 1.0.3
+release    : 1
+source     :
+    - https://git.sr.ht/~ianmjones/snippetexpander/archive/v1.0.3.tar.gz : aed9f1815f9751299938ac910bae3afed4a458840d35803c5bb6fc564399e2a8
+homepage   : https://snippetexpander.org
+license    : GPL-2.0-or-later
+component  : system.utils
+summary    : Your little expandable text snippet helper.
+description: |
+    Save your often used text snippets and then auto expand them whenever you type their abbreviation.
+networking : yes
+builddeps  :
+    - golang
+    - nodejs
+    - libx11-devel
+    - libgtk-3-devel
+    - libwebkit-gtk-devel
+    - vala
+    - at-spi2-devel
+    - libgee-devel
+    - glib2-devel
+    - libgtk-3-devel
+    - ibus-devel
+    - scdoc
+rundeps    :
+    - libwebkit-gtk
+    - xclip
+    - wl-clipboard
+    - xdotool
+    - wtype
+setup      : |
+    go install github.com/wailsapp/wails/v2/cmd/wails@latest
+build      : |
+    export PATH="$PATH:$HOME/go/bin"
+    %make VERSION=v%version%
+install    : |
+    %make_install prefix=/usr
