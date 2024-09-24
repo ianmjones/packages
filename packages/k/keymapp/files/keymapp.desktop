@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Keymapp
+Comment=Keymapp
+Exec=keymapp
+Icon=keymapp
+Keywords=keyboard;flash;layout;
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=Utility;

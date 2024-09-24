@@ -1,0 +1,48 @@
+<PISI>
+    <Source>
+        <Name>keymapp</Name>
+        <Homepage>https://www.zsa.io/flash</Homepage>
+        <Packager>
+            <Name>Ian M. Jones</Name>
+            <Email>ian@ianmjones.com</Email>
+        </Packager>
+        <License>PROPRIETARY</License>
+        <PartOf>system.utils</PartOf>
+        <Summary xml:lang="en">A live visual reference for your ZSA keyboard layout, right when you need it.</Summary>
+        <Description xml:lang="en">Keymapp allows you to view your keyboard&apos;s layout right on your screen, in real-time.
+When you switch a layer, Keymapp&apos;s display updates to show the keys active on this layer.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>keymapp</Name>
+        <Summary xml:lang="en">A live visual reference for your ZSA keyboard layout, right when you need it.</Summary>
+        <Description xml:lang="en">Keymapp allows you to view your keyboard&apos;s layout right on your screen, in real-time.
+When you switch a layer, Keymapp&apos;s display updates to show the keys active on this layer.
+</Description>
+        <PartOf>system.utils</PartOf>
+        <Files>
+            <Path fileType="config">/etc/udev/rules.d/50-zsa.rules</Path>
+            <Path fileType="executable">/usr/bin/keymapp</Path>
+            <Path fileType="data">/usr/share/applications/keymapp.desktop</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/1024x1024/apps/keymapp.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/128x128/apps/keymapp.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/16x16/apps/keymapp.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/24x24/apps/keymapp.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/256x256/apps/keymapp.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/32x32/apps/keymapp.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/48x48/apps/keymapp.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/512x512/apps/keymapp.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/64x64/apps/keymapp.png</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2024-09-24</Date>
+            <Version>1.3.2</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Ian M. Jones</Name>
+            <Email>ian@ianmjones.com</Email>
+        </Update>
+    </History>
+</PISI>
