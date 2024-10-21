@@ -37,9 +37,9 @@ When you switch a layer, Keymapp&apos;s display updates to show the keys active 
         </Files>
     </Package>
     <History>
-        <Update release="1">
-            <Date>2024-09-24</Date>
-            <Version>1.3.2</Version>
+        <Update release="2">
+            <Date>2024-10-15</Date>
+            <Version>1.3.3</Version>
             <Comment>Packaging update</Comment>
             <Name>Ian M. Jones</Name>
             <Email>ian@ianmjones.com</Email>
