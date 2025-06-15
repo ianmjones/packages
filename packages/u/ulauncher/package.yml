@@ -1,8 +1,8 @@
 name       : ulauncher
-version    : 5.15.7
-release    : 20
+version    : 5.9.9
+release    : 21
 source     :
-    - https://github.com/Ulauncher/Ulauncher/releases/download/5.15.7/ulauncher_5.15.7.tar.gz : 6203b0dc6cb2fe8f2aa2b5809c0950ac06766539f23f73da80bb36424760efcf
+    - https://github.com/Ulauncher/Ulauncher/releases/download/v6.0.0-beta18/ulauncher-6.0.0-beta18.tar.gz : 65441a2712631562c1b7903378498ac0308a7f368b3199098be6296f46608449
 homepage   : https://ulauncher.io/
 license    : GPL-3.0-or-later
 component  : desktop
@@ -14,6 +14,7 @@ builddeps  :
     - python-distutils-extra
     - python-installer
     - python-setuptools
+    - python-setuptools-scm
 rundeps    :
     - keybinder
     - libwebkit-gtk
@@ -24,13 +25,10 @@ rundeps    :
     - python-websocket-client
     - python3-dbus
     - pyxdg
-setup      : |
-    %patch -p1 -i $pkgfiles/shutup-distutils.patch
 build      : |
     %python3_setup
 install    : |
     %python3_install
-    rm -r $installdir/usr/share/doc
 
     # We don't have wmctrl because it is DOA
     rm -f $installdir/usr/bin/ulauncher-toggle
